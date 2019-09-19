@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"os"
+)
 
 func functionShouldStdOutSpecial() {
 	// conditional if with simple statement
@@ -12,17 +15,29 @@ func functionShouldStdOutSpecial() {
 }
 
 func functionShouldStdOutGeneral() {
+	// Simple simple statements also apply to switches
+	// Go switches have implicit break statements.
+	// You can also evaluate multiple expressions with a ,
 	switch generalRelativity := 1915; generalRelativity {
 	case 1905:
 		fmt.Println("General Relativity was not published in 1905.")
-	case 1915:
+	case 1915, 0:
 		fmt.Println("That's correct. General Relativity was published in 1915.")
 	default:
 		fmt.Println("Well, it was for sure published at some point in history!")
 	}
 }
 
+func throwErrorBecauseFileDoesNotExist() {
+	_, err := os.Open("./txt.txt")
+
+	if err != nil {
+		fmt.Println("The error is: ", err)
+	}
+}
+
 func main() {
 	functionShouldStdOutSpecial()
 	functionShouldStdOutGeneral()
+	throwErrorBecauseFileDoesNotExist()
 }
