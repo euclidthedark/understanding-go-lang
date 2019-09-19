@@ -29,6 +29,7 @@ func functionShouldStdOutGeneral() {
 }
 
 func throwErrorBecauseFileDoesNotExist() {
+	// Important note, you can also incorporate errors in simple statements as well.
 	_, err := os.Open("./txt.txt")
 
 	if err != nil {
