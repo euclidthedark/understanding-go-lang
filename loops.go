@@ -21,7 +21,12 @@ func iteratingOverArraysOrSlices() {
 // Below is a regular for loop
 func anExampleForLoop() {
 	for i := 0; i < 10; i++ {
-		fmt.Println(i)
+		if i%2 == 0 {
+			fmt.Println("Even")
+		}
+		if i == 8 {
+			break
+		} // This will break the flow of the code, even though the simple statement in the loop syntax has a different conditional.
 	}
 }
 
