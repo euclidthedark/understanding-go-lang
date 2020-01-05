@@ -1,16 +1,16 @@
-package main
+package loops
 
 import "fmt"
 
 // Below is an example of an infinite loop
-func infiniteLoop() {
+func InfiniteLoop() {
 	for {
 		fmt.Println("What is love?")
 	}
 }
 
 // Below is an example of an iterable loop
-func iteratingOverArraysOrSlices() {
+func IteratingOverArraysOrSlices() {
 	theSlice := []string{"a", "b", "c"}
 
 	for _, i := range theSlice {
@@ -19,7 +19,7 @@ func iteratingOverArraysOrSlices() {
 }
 
 // Below is a regular for loop
-func anExampleForLoop() {
+func AnExampleForLoop() {
 	for i := 0; i < 10; i++ {
 		if i%2 == 0 {
 			fmt.Println("Even")
@@ -30,8 +30,11 @@ func anExampleForLoop() {
 	}
 }
 
-func main() {
-	// infiniteLoop()
-	//iteratingOverArraysOrSlices()
-	anExampleForLoop()
+// I think the declaration in the loop will scope up to the next context.
+func AnExampleWhileLoop () {
+	for left, right := 1, 10; left < right {
+		fmt.Println("Working in a while loop!")
+
+		left += 1
+	}
 }

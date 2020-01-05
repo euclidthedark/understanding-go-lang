@@ -1,11 +1,11 @@
-package main
+package conditionals
 
 import (
 	"fmt"
 	"os"
 )
 
-func functionShouldStdOutSpecial() {
+func FunctionShouldStdOutSpecial() {
 	// conditional if with simple statement
 	if specialRelativity, generalRelativity := 1905, 1915; specialRelativity < generalRelativity {
 		fmt.Println("Special")
@@ -14,7 +14,7 @@ func functionShouldStdOutSpecial() {
 	}
 }
 
-func functionShouldStdOutGeneral() {
+func FunctionShouldStdOutGeneral() {
 	// Simple simple statements also apply to switches
 	// Go switches have implicit break statements.
 	// You can also evaluate multiple expressions with a ,
@@ -28,17 +28,11 @@ func functionShouldStdOutGeneral() {
 	}
 }
 
-func throwErrorBecauseFileDoesNotExist() {
+func ThrowErrorBecauseFileDoesNotExist() {
 	// Important note, you can also incorporate errors in simple statements as well.
 	_, err := os.Open("./txt.txt")
 
 	if err != nil {
 		fmt.Println("The error is: ", err)
 	}
-}
-
-func main() {
-	functionShouldStdOutSpecial()
-	functionShouldStdOutGeneral()
-	throwErrorBecauseFileDoesNotExist()
 }

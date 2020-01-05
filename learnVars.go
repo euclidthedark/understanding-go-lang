@@ -1,4 +1,4 @@
-package main
+package vars
 
 import "fmt"
 
@@ -15,7 +15,7 @@ var (
 	name     = "Waylon"
 )
 
-func main() {
+func SeeHowVarsWork() {
 	// You can change vars
 	number = 12
 	// This is the short hand way of declaring variables in Go

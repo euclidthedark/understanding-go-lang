@@ -1,15 +1,15 @@
-package main
+package listTypes
 
 import "fmt"
 
 // This is an array literal
 var arrayForFunction = [5]int{}
 
-func printAnArrayLiteral() {
+func PrintAnArrayLiteral() {
 	fmt.Println(arrayForFunction)
 }
 
-func declareASlice() {
+func DeclareASlice() {
 	// slices are pointers to an array, so you can manipulate the list
 	// below is the short hand syntax to create slices.
 	// you can also use the make function s := make([]int, len=3, cap=3)
@@ -17,7 +17,7 @@ func declareASlice() {
 	fmt.Println(s)
 }
 
-func appendElementsToASlice() {
+func AppendElementsToASlice() {
 	// append ones to the slice
 	sliceOfOnes := []int{}
 
@@ -27,18 +27,11 @@ func appendElementsToASlice() {
 	fmt.Println(sliceOfOnes)
 }
 
-func sliceTheSlice() {
+func SliceTheSlice() {
 	aSlice := []int{1, 2, 3, 4, 5, 6, 7, 8}
 
 	// Manipulating slices is very similar to list types
 	// in Python
 	fmt.Println(aSlice[:5])
 	fmt.Println(aSlice[5:])
-}
-
-func main() {
-	printAnArrayLiteral()
-	declareASlice()
-	appendElementsToASlice()
-	sliceTheSlice()
 }
